@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+main {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Responsive Image Placeholders */
+.image-placeholder {
+    background-color: #e0e0e0;
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.image-placeholder img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    width: auto;
+    height: auto;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    min-height: 70vh;
+    background-image: url("../assets/portofolio-youtube/banner\ 2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.image-placeholder-judul {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.image-placeholder-judul h1 {
+    color: white;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    word-wrap: break-word;
+}
+
+/* Grid Containers */
+.grid-container,
+.grid-container-data-cleaning,
+.grid-container-data-visualization {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 20px 0;
+}
+
+/* Text Content */
+.data-acquisition .text-content
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.data-visualization .text-content
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.text-content,
+.text-content-data-cleaning,
+.data-visualization .text-content {
+    padding: 0 20px;
+    max-width: 100%;
+}
+
+.text-content p,
+.text-content-data-cleaning p,
+.data-visualization .text-content p {
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.text-content ul,
+.text-content-data-cleaning ul,
+.data-visualization .text-content ul {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.text-content ul li,
+.text-content-data-cleaning ul li,
+.data-visualization .text-content ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.text-content ul ul,
+.text-content-data-cleaning ul ul,
+.data-visualization .text-content ul ul {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.text-content ul ul li,
+.text-content-data-cleaning ul ul li,
+.data-visualization .text-content ul ul li {
+    margin-bottom: 5px;
+}
+
+/* Column List */
+.column-list {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.column-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.column-list ul li {
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+/* Hiring Section */
+.hiring-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.hiring{
+    flex: 1 1;
+    max-width: 100%;
+    background-color: #e5e7eb;
+    margin-top: 50px;
+}
+
+.image-placeholder-hiring
+{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-placeholder-hiring img
+{
+    width: 60%;
+    height: auto;
+}
+
+.hiring-content {
+    flex: 1 1;
+    margin-right: 2%;
+    margin-left: 2%;
+    text-align: left;
+
+}
+/* hiring end */
+
+/* Buttons */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.primary-btn, 
+.secondary-btn {
+    flex: 1 1;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #6C63FF;
+    color: white;
+    max-width: 180px;
+}
+
+.secondary-btn {
+    background-color: #e5e7eb;
+    color: black;
+    border: 2px solid black;
+    max-width: 220px;
+}
+
+.primary-btn:hover {
+    background-color: #5650d8;
+}
+
+.secondary-btn:hover {
+    background-color: #f5f5f5;
+}
+
+/* Responsive Typography and Layout */
+@media (max-width: 768px) {
+    .grid-container,
+    .grid-container-data-cleaning,
+    .grid-container-data-visualization {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 50vh;
+    }
+
+    .hiring-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hiring-content {
+        text-align: center;
+    }
+
+    .hiring-content p 
+    {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .image-placeholder-hiring
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .primary-btn, 
+    .secondary-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .text-content-data-cleaning, .data-visualization .text-content
+    {
+        margin: 0;
+    }
+}
+
+/* Specific Section Adjustments */
+.cleaning-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: clamp(20px, 4vw, 24px);
+}
+
+/* Additional Responsiveness Improvements */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure proper scaling and readability */
+* {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis Layout</title>
+    <link rel="stylesheet" href="/css/project.css">
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <div class="image-placeholder-judul">
+                <h1>Youtube Perfomance Analytics</h1>
+            </div>
+        </section>
+
+        <section class="data-acquisition">
+            <h2>Data Collection</h2>
+            <div class="grid-container">
+                <div class="image-placeholder"><img src="/assets/portofolio-youtube/data-collection-1.png" alt=""></div>
+                <div class="image-placeholder"><img src="/assets/portofolio-youtube/data-collection-2.png" alt=""></div>
+            </div>
+            <div class="text-content">
+                <p>The process of data collection for this YouTube performance analytics project involves utilizing a publicly available dataset sourced from a 
+                    well-known platform called <a href="https://www.kaggle.com/" target="_blank">Kaggle</a> <a href="https://www.kaggle.com/datasets/positivealexey/youtube-channel-performance-analytics" target="_blank">(click this to direct into this dataset)</a>. 
+                    Kaggle is a popular repository that provides diverse datasets for analytical and machine-learning purposes, ensuring reliable and structured data for 
+                    various projects. This particular dataset contains a comprehensive total of 70 columns, each representing distinct attributes related to YouTube video 
+                    performance metrics. However, not all these columns are relevant to the objectives of this project. To ensure clarity and focus in the analysis, I will perform a thorough data cleaning process, which includes carefully reviewing and removing columns that are deemed unnecessary for the visualizations. This step will help streamline the dataset, making it more manageable and aligned with the goals of the analysis.</p>
+                
+                <p>Here are some of the key columns that will be used in this analysis:</p>
+                
+                <div class="column-list">
+                    <ul>
+                        <li><strong>ID:</strong> Unique identifier for each video</li>
+                        <li><strong>Video Duration:</strong> Duration of the video in seconds</li>
+                        <li><strong>Video Publish Time:</strong> Date and time when the video was published</li>
+                        <li><strong>Days Since Publish:</strong> Number of days since the video was published</li>
+                        <li><strong>Time-related Data:</strong>
+                            <ul>
+                                <li>Day: Day of the month</li>
+                                <li>Month: Publication month</li>
+                                <li>Year: Publication year</li>
+                                <li>Day of Week: Publication day of the week</li>
+                            </ul>
+                        </li>
+                        <li><strong>Engagement Metrics:</strong>
+                            <ul>
+                                <li>New Comments: Number of new comments</li>
+                                <li>Shares: Video share count</li>
+                                <li>Like Rate (%): Percentage of likes</li>
+                                <li>Likes & Dislikes: Interaction counts</li>
+                            </ul>
+                        </li>
+                        <li><strong>Performance Metrics:</strong>
+                            <ul>
+                                <li>Watch Time (hours)</li>
+                                <li>Subscribers & Unsubscribes</li>
+                                <li>Estimated Revenue (USD)</li>
+                                <li>Impressions & CTR (%)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="data-cleaning">
+            <h2>Data Cleaning/Standardizing</h2>
+            <div class="cleaning-container">
+
+                <div class="grid-container-data-cleaning">
+                    <div class="image-placeholder"><img src="/assets/portofolio-youtube/data-cleaning-1.png" alt=""></div>
+                    <div class="image-placeholder"><img src="/assets/portofolio-youtube/data-cleaning-2.png" alt=""></div>
+                </div>
+                <div class="text-content">
+                    <p>As explained in the data collection section, this dataset contains 70 different columns (I did not display all the columns from the dataset in the image above). Many columns 
+                        have corrupted data types (unreadable/displayed as ####), and some are irrelevant (no values or all values are identical). 
+                        The first step I took in this data cleaning process was to convert the entire dataset into a table in Microsoft Excel. Then, 
+                        I removed all duplicates within the dataset using the "Remove Duplicates" feature in the "Data" tab of Microsoft Excel. The result of removing duplicate data is null, 
+                        as no duplicate data was found in this dataset. 
+                        The result of the data cleaning process so far looks like this :</p>
+                    <!-- Add more lorem ipsum paragraphs as needed -->
+                </div>
+
+                <div class="grid-container-data-cleaning">
+                    <div class="image-placeholder"><img src="/assets/portofolio-youtube/data-cleaning-3.png" alt=""></div>
+                    <div class="image-placeholder"><img src="/assets/portofolio-youtube/data-cleaning-4.png" alt=""></div>
+                </div>
+                <div class="text-content-data-cleaning">
+                    <p>After removing duplicate data and converting the entire dataset into a table, I then performed data cleaning and standardization for each column (only those needed for visualization). Here are some examples of the steps I took when cleaning the dataset :</p>
+                    <ul>
+                        <li>I transformed the 'Video Duration (seconds)' column into 'Duration (minutes)' and then grouped the 'Duration (minutes)' column to create a new column called 'Duration Staging (minutes)'.</li>
+                        <li>I combined three columns ('Day', 'Month', 'Year') and converted them into a DATE data type in the 'Date Published' column to simplify the visualization process.</li>
+                        <li>I reviewed all 70 columns one by one and deleted any columns with only a single value (to reduce the dataset size for visualization purposes).</li>
+                        <li>I refined several columns (adjusting data types or simply reducing trailing zeros) that had potential to be used in visualizations.</li>
+                    </ul>
+                </div>
+
+                <div class="grid-container-data-cleaning">
+                    <div class="image-placeholder"><img src="/assets/portofolio-youtube/data-cleaning-5.png" alt=""></div>
+                    <div class="image-placeholder"><img src="/assets/portofolio-youtube/data-cleaning-6.png" alt=""></div>
+                    <div class="image-placeholder"><img src="/assets/portofolio-youtube/data-cleaning-7.png" alt=""></div>
+                    <div class="image-placeholder"><img src="/assets/portofolio-youtube/data-cleaning-8.png" alt=""></div>
+                </div>
+                <div class="text-content">
+                    <p>After completing all these steps, the data is now clean and ready for visualization. Below, I will present a
+                         screenshot of the fully cleaned dataset for your reference :</p>
+                    <!-- Add more lorem ipsum paragraphs as needed -->
+                </div>
+                <div class="grid-container-data-cleaning">
+                    <div class="image-placeholder"><img src="/assets/portofolio-youtube/data-cleaning-9.png" alt=""></div>
+                    <div class="image-placeholder"><img src="/assets/portofolio-youtube/data-cleaning-10.png" alt=""></div>
+                    <div class="image-placeholder"><img src="/assets/portofolio-youtube/data-cleaning-11.png" alt=""></div>
+                    <div class="image-placeholder"><img src="/assets/portofolio-youtube/data-cleaning-12.png" alt=""></div>
+            </div>
+        </section>
+
+        <!-- Data Visualization Start -->
+        <section class="data-visualization">
+            
+            <h2>Data Visualization</h2>
+            
+            <div class="image-container">
+                <div class="image-placeholder-data-visualization">
+                    <div class="grid-container-data-visualization">
+                        <div class="image-placeholder"><img src="/assets/portofolio-youtube/Channel Growth.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-content">
+                <p>In the first dashboard of my data visualization results, we can see several key points from this data for the period 
+                    2016 - 2024, including 364 total videos, more than 3.5 million watch hours, over 10,000 unsubscribers, more than 127,000 new subscribers,
+                    and an estimated revenue exceeding 3,000 USD. Additionally, I have presented the channel's growth in several aspects: subscribers, watch time (hours),
+                    and revenue (USD).
+                </p>
+                <p>Here are some details regarding the Subscriber aspect :</p>
+                    <ul>
+                        <li>The highest subscriber increase occurred in the 2016-2017 period, where subscribers grew by 30,672</li>
+                        <li>The peak in subscriber growth was in 2018, with an increase of 39,125 subscribers, while the lowest point was at the end of the data period, 2023-2024</li>
+                        <li>The largest decline in new subscribers occurred in the 2018-2019 period, where new subscribers decreased from 39,125 to 10,601</li>
+                    </ul>
+                <p>Here are some details regarding the Watch Time (hours) aspect :</p>
+                    <ul>
+                        <li>Unlike the subscriber aspect, the highest point for watch time was in 2017, reaching 1.3 million hours in a single year</li>
+                        <li>The largest increase and decrease in watch time occurred during the periods 2016-2017 and 2018-2019, similar to the subscriber aspect</li>
+                        <li>The lowest watch time was in 2016 (76.6 thousand hours), followed by 2023 (77.4 thousand hours)</li>
+                    </ul>
+                <p>Here are some details regarding the Revenue (USD) aspect :</p>
+                    <ul>
+                        <li>The lowest revenue was at the start of the data, in 2016, with earnings of only 79.7 USD, while the highest revenue reached 1,000 USD in 2017, marking the best increase in this dataset</li>
+                        <li>The steepest revenue decline was in the 2017-2018 period, where revenue dropped from 1,002 USD to 361.9 USD, with further declines continuing until 2019 (228 USD)</li>
+                        <li>A significant increase was observed between 2019-2021, but a notable decline occurred during the 2021-2023 period</li>
+                    </ul>
+
+                <p>All data in this dashboard are interconnected. When one aspect shows an upward trend, the others follow suit. Conversely, if one aspect experiences a downturn, the others will also experience the same pattern.</p>
+                
+                <!-- Add more lorem ipsum paragraphs as needed -->
+            </div>
+
+            <div class="image-container">
+                <div class="image-placeholder-data-visualization">
+                    <div class="grid-container-data-visualization">
+                        <div class="image-placeholder"><img src="/assets/portofolio-youtube/Impact of upload day.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-content">
+                <p>After analyzing the overall growth of the channel (from 2016 to 2024), we will now examine the impact of the day a video is uploaded.
+                    This analysis focuses on three key aspects: subscribers, likes, and watch time. At a glance, the highest point of channel growth occurred
+                    on videos uploaded on Fridays, where watch time exceeded 691,000 hours (over the 2016 - 2024 period). Below, I will elaborate on specific details for each aspect.</p>
+                <p>Subscriber Aspect :</p>
+                    <ul>
+                        <li>The highest number of new subscribers was seen in videos uploaded on Fridays, while the lowest was on Thursdays.</li>
+                        <li>The highest number of unsubscribes occurred on Sundays, whereas the lowest was on Thursdays.</li>
+                        <li>The highest subscriber growth was observed in videos uploaded on Fridays, with an increase of 25,265 accounts (27,270 - 2,005).</li>
+                    </ul>
+                <p>Total Likes Aspect :</p>
+                    <ul>
+                        <li>While the highest subscriber growth occurred on Fridays, the total likes peaked on Sundays, reaching over 387,000 likes.</li>
+                        <li>The lowest total likes were recorded on Thursdays, amounting to just over 150,000 likes (2016–2024).</li>
+                    </ul>
+                <p>Watch Time Aspect :</p>
+                    <ul>
+                        <li>The highest watch time matches the peak in total likes, occurring on Sundays with over 691,000 hours, followed by Fridays with over 597,000 hours (2016–2024).</li>
+                        <li>The lowest watch time was on Thursdays, where the channel garnered only 333,000+ hours of watch time during the 2016–2024 period. This decline also affected the other aspects,
+                            as watch time tends to influence overall performance.</li>
+                    </ul>
+            </div>
+
+            <div class="image-container">
+                <div class="image-placeholder-data-visualization">
+                    <div class="grid-container-data-visualization">
+                        <div class="image-placeholder"><img src="/assets/portofolio-youtube/Impact of Duration.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-content">
+                <p>Now we will analyze the results from the final visualization dashboard of this project. This dashboard visualizes the impact of video duration.
+                     I divided the durations into eight categories: less than 5 minutes, 6–10 minutes, 11–15 minutes, 16–20 minutes, 21–25 minutes, 26–30 minutes,
+                      31–35 minutes, and more than 35 minutes. All durations are measured in minutes. At a glance, in terms of revenue and subscribers, videos lasting 6–10 minutes had the most significant impact. Here are the details</p>
+                <p>Details on Average Watch Hour Aspect :</p>
+                    <ul>
+                        <li>Unlike the subscriber and revenue aspects, the highest point in this aspect was found in videos lasting 11–15 minutes.
+                             Why? Because the average is calculated based on the number of videos uploaded within that duration. Although 6–10 minute videos had a substantial impact on other aspects,
+                              the large number of uploads in this duration category increased the divisor, lowering the average.</li>
+                        <li>Videos with the lowest average watch time were those less than 5 minutes long, followed by videos lasting more than 35 minutes.</li>
+                    </ul>
+
+                <p>Details on Subscriber Aspect :</p>
+                    <ul>
+                        <li>Videos lasting 6–10 minutes gained more than 72,000 new subscribers, making this duration the most impactful for subscriber acquisition. This was followed by videos lasting 11–15 minutes, which gained more than 41,000 new subscribers.</li>
+                        <li>Videos with the lowest subscriber growth were those lasting more than 35 minutes, as they were less appealing to viewers.</li>
+                    </ul>
+
+                <p>Details on Revenue Aspect :</p>
+                    <ul>
+                        <li>Similar to the subscriber aspect, videos lasting 6–10 minutes achieved the highest revenue. This duration category generated the most significant revenue during the 2016–2024 period, totaling 1,524 USD. It was followed by videos lasting 11–15 minutes, which earned 1,272 USD.</li>
+                        <li>Out of the eight video duration categories, only two exceeded the average revenue during the 2016–2024 period: 6–10 minute videos and 11–15 minute videos. The remaining categories were far below the average, with videos longer than 35 minutes generating the lowest revenue.</li>
+                    </ul>
+            </div>
+            
+        </section>
+        <!-- Data Visualization End -->
+
+        
+        <section class="hiring">
+            <div class="hiring-container">
+                
+                <div class="image-placeholder-hiring">
+                    <img src="/assets/image/foto portofolio 2.png" alt="">
+                </div>
+                
+                <div class="hiring-content">
+                    <h2>Interested in Hiring Me?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="button-container">
+                        <button class="primary-btn">Get In Touch</button>
+                        <button class="secondary-btn">See Another Project</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <script src="../Javascript/js.js"></script>
+
+</body>
+</html>
