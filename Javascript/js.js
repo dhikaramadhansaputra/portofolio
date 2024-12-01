@@ -4,6 +4,11 @@ document.querySelector('.see-portfolio').addEventListener('click', () => {
   document.querySelector('.portfolio').scrollIntoView({ behavior: 'smooth' });
 });
 
+// Smooth scrolling for navigation for get in touch
+document.querySelector('.get-in-touch').addEventListener('click', () => {
+  document.querySelector('.contact').scrollIntoView({ behavior: 'smooth' });
+});
+
 // Button hover effects
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => {
@@ -14,6 +19,7 @@ buttons.forEach(button => {
       button.style.opacity = '1';
   });
 });
+
 
 // Project details button animation
 const projectButtons = document.querySelectorAll('.project-details');

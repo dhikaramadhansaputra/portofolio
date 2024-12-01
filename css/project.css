@@ -4,6 +4,26 @@
     box-sizing: border-box;
 }
 
+/* General fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px); /* You can change the transform to achieve different effects */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation class */
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Optional: you can define other animations for different effects */
+
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;

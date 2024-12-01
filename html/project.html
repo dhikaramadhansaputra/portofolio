@@ -232,9 +232,10 @@
                 
                 <div class="hiring-content">
                     <h2>Interested in Hiring Me?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>To everyone who has viewed my Youtube channel perfomance analytics portfolio, thank you very much.
+                         I created this portfolio to advance my career in the field of data analytics.
+                          I hope you appreciate the way I approach data collecting, data cleaning/standardizing, and data visualization.
+                           Once again, thank you very much from me, Dhika Ramadhan Saputra.</p>
                     <div class="button-container">
                         <button class="primary-btn">Get In Touch</button>
                         <button class="secondary-btn">See Another Project</button>
@@ -245,7 +246,61 @@
         </section>
     </main>
 
-    <script src="../Javascript/js.js"></script>
+    <script>
+        // Function to check if an element is in the viewport
+        function isInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top < window.innerHeight && // The element is at or above the bottom of the viewport
+                rect.bottom > 0 && // The element is at or below the top of the viewport
+                rect.left < window.innerWidth && // The element is at or to the left of the viewport
+                rect.right > 0 // The element is at or to the right of the viewport
+            );
+        }
+    
+        // Function to add animation class to elements when they come into the viewport
+        function handleScroll() {
+            const elements = document.querySelectorAll('div, section, article, p, span'); // Add more tags as needed
+            elements.forEach(el => {
+                if (isInViewport(el) && !el.classList.contains('fade-in')) {
+                    el.classList.add('fade-in'); // Add the fade-in animation class to the element
+                }
+            });
+        }
+    
+        // Initial check in case elements are already in the viewport on page load
+        window.addEventListener('load', () => {
+            setTimeout(handleScroll, 100); // Wait a bit before running on load to ensure all elements are ready
+        });
+    
+        // Check on scroll
+        window.addEventListener('scroll', handleScroll);
+
+        // tombol primary dan secondary
+        // Function to handle button click and redirect to specific class in index.html
+function handleButtonClick(event) {
+    const buttonClass = event.target.classList[0]; // Get the button class (primary-btn or secondary-btn)
+
+    // Check if the clicked button is the primary button
+    if (buttonClass === 'primary-btn') {
+        window.location.href = '../index.html#contact'; // Redirect to index.html and scroll to primary-section
+    } 
+    // Check if the clicked button is the secondary button
+    else if (buttonClass === 'secondary-btn') {
+        window.location.href = '../index.html#portofolio'; // Redirect to index.html and scroll to secondary-section
+    }
+}
+
+// Attach event listeners to the buttons
+document.querySelectorAll('.primary-btn, .secondary-btn').forEach(button => {
+    button.addEventListener('click', handleButtonClick);
+});
+
+
+
+    </script>
+    
+    
 
 </body>
 </html>
