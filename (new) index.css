@@ -202,7 +202,7 @@ section {
 #socials-container {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   gap: 1rem;
 }
 
@@ -210,7 +210,7 @@ section {
 
 .icon {
   cursor: pointer;
-  height: 2rem;
+  height: 4rem;
 }
 
 /* BUTTONS */
@@ -287,12 +287,6 @@ section {
   border-radius: 2rem;
 }
 
-.arrow {
-  position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
-}
-
 .details-container {
   padding: 1.5rem;
   flex: 1;
@@ -344,9 +338,12 @@ section {
 
 article {
   display: flex;
+  flex-direction: column;
   width: 10rem;
   justify-content: space-around;
   gap: 0.5rem;
+  align-items: center;
+  text-align: center;
 }
 
 article .icon {
@@ -386,7 +383,7 @@ article .icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  height: 15vh;
 }
 
 .contact-info-upper-container {
@@ -414,6 +411,7 @@ article .icon {
 
 .contact-icon {
   cursor: default;
+  height: 2rem;
 }
 
 .email-icon {
@@ -423,8 +421,8 @@ article .icon {
 /* FOOTER SECTION */
 
 footer {
-  height: 26vh;
-  margin: 0 1rem;
+  height: 12vh;
+  margin: 0 0rem;
 }
 
 footer p {
@@ -487,10 +485,14 @@ footer p {
   }
   
   @media screen and (max-width: 600px) {
-    #contact,
-    footer {
+    #contact {
       height: 40vh;
     }
+
+    footer {
+      height: 12vh;
+    }
+
     #profile {
       height: 83vh;
       margin-bottom: 0;
@@ -539,4 +541,19 @@ footer p {
     .text-container {
       text-align: justify;
     }
+
+    .contact-info-upper-container{
+      gap: 0.6rem;
+    }
+
+    .section__pic-container {
+      height: 250px;
+      width: 250px;
+      margin-top: 1rem;
+    }
+
+    #profile{
+      margin-bottom: 3rem;
+    }
+    
   }
