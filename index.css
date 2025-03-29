@@ -356,6 +356,14 @@ article .icon {
   position: relative;
 }
 
+.about-containers-project {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
@@ -370,10 +378,13 @@ article .icon {
 .project-title {
   margin: 1rem;
   color: black;
+  font-size: 1.4rem;
 }
 
 .project-btn {
   color: black;
+  font-weight: bold;
+  font-size: 1rem;
   border-color: rgb(163, 163, 163);
 }
 
@@ -482,6 +493,11 @@ footer p {
     .about-containers {
       margin-top: 0;
     }
+
+    .about-containers-project {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 3 kolom */
+    }
   }
   
   @media screen and (max-width: 600px) {
@@ -555,5 +571,18 @@ footer p {
     #profile{
       margin-bottom: 3rem;
     }
+
+    .about-containers-project {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr); /* 3 kolom */
+
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }    
+    
     
   }
