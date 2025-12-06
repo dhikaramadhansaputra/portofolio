@@ -306,6 +306,13 @@ a.btn:hover {
   height: 80%;
 }
 
+#profile .section__pic-container img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100%; /* Pastikan gambar mengisi container 400x400 */
+  height: 100%; /* Pastikan gambar mengisi container 400x400 */
+}
+
 .section__pic-container {
   height: 400px;
   width: 400px;
