@@ -28,9 +28,9 @@
           Download CV
         </a>
 
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+        <a class="btn btn-color-1" href="#contact">
           Kontak Saya
-        </button>
+        </a>
       </div>
       <div id="socials-container">
         <img src="./assets/index/linkedin.png" alt="My LinkedIn profile" class="icon"
@@ -404,6 +404,27 @@
     </div>
   </section>
 
+  <section id="publications">
+    <p class="section__text__p1">Artikel &amp; Karya Tulis</p>
+    <h1 class="title">Publikasi</h1>
+    <div class="experience-details-container">
+      <div class="about-containers-project">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/index/project-1.png" alt="Gambar publikasi sementara" class="project-img" />
+          </div>
+          <div class="project-content">
+            <h2 class="experience-sub-title project-title">Lorem Ipsum Dolor: Consectetur Adipiscing Elit</h2>
+            <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat, velit sed tincidunt varius, justo erat consequat magna, vitae posuere lorem neque sit amet erat.</p>
+            <div class="btn-container">
+              <a class="btn btn-color-2 project-btn" href="./">Lihat Publikasi</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="photo-gallery">
     <p class="section__text__p1">Di Balik Layar</p>
     <h1 class="title">Galeri Foto</h1>
@@ -439,16 +460,43 @@
   </section>
 
   <section id="contact">
-    <p class="section__text__p1">Ingin diskusi lebih lanjut ?</p>
-    <h1 class="title">Kontak Saya</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img src="./assets/index/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-        <p><a href="mailto:dhikaramadhansaputra@gmail.com">dhikaramadhansaputra</a></p>
+    <div class="contact-card">
+      <div class="contact-intro">
+        <p class="contact-eyebrow">Mari Terhubung</p>
+        <h1 class="title">Punya ide atau ingin berdiskusi?</h1>
+        <p class="contact-description">Saya terbuka untuk berbagi cerita, bertukar ide, dan membahas peluang kolaborasi. Silakan hubungi saya melalui kanal berikut.</p>
       </div>
-      <div class="contact-info-container">
-        <img src="./assets/index/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-        <p><a href="https://www.linkedin.com/in/dhikaramadhansaputra/" target="_blank">Dhika Ramadhan Saputra</a></p>
+      <div class="contact-methods">
+        <a class="contact-method" href="mailto:dhikaramadhansaputra@gmail.com">
+          <span class="contact-method-icon">
+            <img src="./assets/icon/gmail-color.svg" alt="" />
+          </span>
+          <span class="contact-method-copy">
+            <span class="contact-method-label">Email</span>
+            <span class="contact-method-value">dhikaramadhansaputra@gmail.com</span>
+          </span>
+          <span class="contact-method-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="contact-method" href="https://www.linkedin.com/in/dhikaramadhansaputra/" target="_blank" rel="noopener noreferrer">
+          <span class="contact-method-icon">
+            <img src="./assets/icon/linkedin-color.svg" alt="" />
+          </span>
+          <span class="contact-method-copy">
+            <span class="contact-method-label">LinkedIn</span>
+            <span class="contact-method-value">Dhika Ramadhan Saputra</span>
+          </span>
+          <span class="contact-method-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="contact-method" href="https://www.instagram.com/dhikars._/" target="_blank" rel="noopener noreferrer">
+          <span class="contact-method-icon">
+            <img src="./assets/icon/instagram.png" alt="" />
+          </span>
+          <span class="contact-method-copy">
+            <span class="contact-method-label">Instagram</span>
+            <span class="contact-method-value">@dhikars._</span>
+          </span>
+          <span class="contact-method-arrow" aria-hidden="true">&rarr;</span>
+        </a>
       </div>
     </div>
   </section>
