@@ -333,7 +333,9 @@ a.btn:hover {
 }
 
 @media screen and (min-width: 1201px) {
-  #work-experience .experience-details-container {
+  #work-experience .experience-details-container,
+  #projects .experience-details-container,
+  #certifications .experience-details-container {
     width: min(68vw, 1200px);
     margin-inline: auto;
   }
@@ -589,12 +591,35 @@ a.btn:hover {
   padding-bottom: 4vh;
 }
 
-.about-containers-project {
+.about-containers-project,
+.about-containers-certification {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 kolom */
-  gap: 2rem;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+}
+
+.about-containers-certification {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.about-containers-project .details-container,
+.about-containers-certification .details-container {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.35fr);
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  text-align: left;
+}
+
+.about-containers-certification .details-container {
+  position: relative;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
 }
 
 .color-container {
@@ -602,16 +627,62 @@ a.btn:hover {
   background: rgb(250, 250, 250);
 }
 
+.about-containers-project .article-container,
+.about-containers-certification .article-container {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
+.about-containers-certification .article-container {
+  width: 5rem;
+  height: 5rem;
+  aspect-ratio: auto;
+}
+
 .project-img {
+  display: block;
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.certification-img {
+  box-sizing: border-box;
+  padding: 0.8rem;
+  background: #ffffff;
+  object-fit: contain;
+}
+
+.project-content {
+  min-width: 0;
+}
+
+.project-description {
+  margin: 0 0 1.25rem;
+  line-height: 1.7;
+  color: #4b5563;
 }
 
 .project-title {
-  margin: 1rem;
+  margin: 0 0 0.75rem;
   color: black;
   font-size: 1.4rem;
+}
+
+.about-containers-project .btn-container,
+.about-containers-certification .btn-container {
+  justify-content: flex-end;
+}
+
+.about-containers-certification .project-title {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.about-containers-certification .project-description {
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
 }
 
 .project-btn {
@@ -619,6 +690,38 @@ a.btn:hover {
   font-weight: bold;
   font-size: 1rem;
   border-color: rgb(163, 163, 163);
+}
+
+.about-containers-certification .project-btn {
+  width: auto;
+  padding: 0.65rem 0.8rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.about-containers-certification .certification-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: auto;
+  height: auto;
+  padding: 0;
+  color: transparent;
+  background: transparent;
+  border-color: transparent;
+  border-radius: inherit;
+  font-size: 0;
+  outline-offset: -4px;
+}
+
+.about-containers-certification .certification-link:hover {
+  color: transparent;
+  background: transparent;
+  border-color: transparent;
+}
+
+.about-containers-certification .certification-link:focus-visible {
+  outline: 3px solid #0f172a;
 }
 
 /* PHOTO GALLERY */
@@ -777,7 +880,11 @@ footer p {
 
     .about-containers-project {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 3 kolom */
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .about-containers-certification {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .work-container {
@@ -899,9 +1006,48 @@ footer p {
     }
 
     .about-containers-project {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr); /* 3 kolom */
+      grid-template-columns: minmax(0, 1fr);
+    }
 
+    .about-containers-certification {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .about-containers-project .details-container,
+    .about-containers-certification .details-container {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .about-containers-project .article-container,
+    .about-containers-certification .article-container {
+      aspect-ratio: 16 / 9;
+    }
+
+    .about-containers-certification .details-container {
+      grid-template-columns: 3.5rem minmax(0, 1fr);
+      align-items: start;
+      gap: 0.75rem;
+      padding: 1rem;
+    }
+
+    .about-containers-certification .article-container {
+      width: 3.5rem;
+      height: 3.5rem;
+      aspect-ratio: auto;
+    }
+
+    .certification-img {
+      padding: 0.6rem;
+    }
+
+    .about-containers-certification .project-title {
+      margin-bottom: 0.35rem;
+      font-size: 1rem;
+    }
+
+    .about-containers-certification .project-description {
+      margin-bottom: 0.65rem;
+      font-size: 0.9rem;
     }
 
     .work-container {
