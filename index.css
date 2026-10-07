@@ -66,6 +66,94 @@ a:hover {
   cursor: default;
 }
 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0.7rem clamp(1rem, 4vw, 3rem);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    radial-gradient(ellipse at 5% 0%, rgba(59, 130, 246, 0.2), transparent 45%),
+    linear-gradient(135deg, #111827 0%, #1f2937 100%);
+}
+
+.site-nav {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: min(100%, 1320px);
+  height: 3rem;
+  margin: 0 auto;
+}
+
+.site-nav-brand {
+  align-self: center;
+  color: #f8fafc;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  text-decoration: none;
+}
+
+.site-nav-brand span {
+  color: #93c5fd;
+}
+
+.site-nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.1rem, 0.4vw, 0.4rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.35rem;
+  padding: 0 clamp(0.45rem, 0.8vw, 0.75rem);
+  border-radius: 999px;
+  color: #cbd5e1;
+  font-size: clamp(0.7rem, 0.78vw, 0.8rem);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+
+.site-nav-links a:hover,
+.site-nav-links a[aria-current="location"] {
+  color: #fff;
+  background: rgba(148, 163, 184, 0.18);
+}
+
+.site-nav-links a[aria-current="location"] {
+  font-weight: 700;
+}
+
+.site-nav-links li:last-child a {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background: #bfdbfe;
+  color: #111827;
+}
+
+.site-nav-links li:last-child a:hover,
+.site-nav-links li:last-child a[aria-current="location"] {
+  background: #dbeafe;
+  color: #111827;
+}
+
+.site-nav-toggle {
+  display: none;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
 /* HAMBURGER MENU */
 
 #hamburger-nav {
@@ -163,19 +251,30 @@ section {
 /* PROFILE SECTION */
 
 #profile {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: clamp(3rem, 5vw, 5rem);
+  width: min(calc(100% - 3rem), 1320px);
   min-height: 74vh;
   padding-top: 3vh;
   padding-bottom: 1.5vh;
-  margin-bottom: 0.5rem;
+  margin: 0 auto 0.5rem;
+}
+
+#profile .section__pic-container {
+  width: min(100%, 480px);
+  height: auto;
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  margin: 0 auto;
 }
 
 .section__pic-container {
   display: flex;
   height: 400px;
   width: 400px;
+  flex: 0 0 400px;
   margin: auto 0;
 }
 
@@ -274,6 +373,23 @@ a.btn:hover {
   position: relative;
   padding-top: 2.5vh;
   padding-bottom: 3vh;
+}
+
+#about .section-container {
+  align-items: stretch;
+}
+
+#about .section__pic-container {
+  flex: 0 0 clamp(280px, 30vw, 360px);
+  width: clamp(280px, 30vw, 360px);
+  height: auto;
+  margin: 0;
+}
+
+#about .about-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-containers {
@@ -949,6 +1065,84 @@ footer p {
     #hamburger-nav {
       display: flex;
     }
+    .site-nav-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      align-self: center;
+      padding: 0.55rem 0.8rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #f8fafc;
+      font: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .site-nav-toggle-icon {
+      display: grid;
+      gap: 4px;
+      width: 16px;
+    }
+    .site-nav-toggle-icon span {
+      width: 100%;
+      height: 2px;
+      border-radius: 2px;
+      background: currentColor;
+      transition: transform 180ms ease;
+    }
+    .site-nav.menu-open .site-nav-toggle-icon span:first-child {
+      transform: translateY(3px) rotate(45deg);
+    }
+    .site-nav.menu-open .site-nav-toggle-icon span:last-child {
+      transform: translateY(-3px) rotate(-45deg);
+    }
+    .site-nav-links {
+      position: absolute;
+      top: calc(100% + 0.75rem);
+      right: 0;
+      left: 0;
+      display: none;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.25rem;
+      padding: 0.65rem;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 1rem;
+      background:
+        radial-gradient(ellipse at 5% 0%, rgba(59, 130, 246, 0.2), transparent 45%),
+        linear-gradient(135deg, #111827 0%, #1f2937 100%);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.3);
+    }
+    .site-nav.menu-open .site-nav-links {
+      display: grid;
+    }
+    .site-nav-links a {
+      box-sizing: border-box;
+      width: 100%;
+      min-height: 2.75rem;
+      padding: 0 0.8rem;
+      border-radius: 0.65rem;
+      font-size: 0.9rem;
+    }
+    .site-nav-links a:hover,
+    .site-nav-links a[aria-current="location"] {
+      background: rgba(148, 163, 184, 0.18);
+      color: #fff;
+    }
+    .site-nav-links li:last-child a,
+    .site-nav-links li:last-child a:hover,
+    .site-nav-links li:last-child a[aria-current="location"] {
+      padding-right: 0.8rem;
+      padding-left: 0.8rem;
+      background: #bfdbfe;
+      color: #111827;
+    }
+    .site-nav-links li:last-child a:hover,
+    .site-nav-links li:last-child a[aria-current="location"] {
+      background: #dbeafe;
+      color: #111827;
+    }
     #experience,
     .experience-details-container {
       margin-top: 2rem;
@@ -956,6 +1150,10 @@ footer p {
     #profile,
     .section-container {
       display: block;
+    }
+    #profile {
+      width: auto;
+      margin: 0 5%;
     }
     .arrow {
       display: none;
@@ -971,6 +1169,23 @@ footer p {
       width: 275px;
       height: 275px;
       margin: 0 auto 2rem;
+    }
+    #profile .section__pic-container {
+      width: 275px;
+      height: 275px;
+      flex-basis: 275px;
+    }
+    #about .section__pic-container {
+      flex: 0 0 275px;
+      width: 275px;
+      height: 275px;
+      justify-content: center;
+      margin: 0 auto 2rem;
+    }
+    #about .about-pic {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
     }
     .about-containers {
       margin-top: 0;
@@ -1069,6 +1284,12 @@ footer p {
       width: auto;
       height: 46vw;
       justify-content: center;
+    }
+    #profile .section__pic-container {
+      width: min(250px, 70vw);
+      height: auto;
+      aspect-ratio: 1;
+      flex-basis: auto;
     }
     .section__text__p2 {
       font-size: 1.25rem;

@@ -11,12 +11,30 @@
 
 <body>
 
-  <h4>Mohon maaf, website portofolio ini sedang dalam update, segala foto hanya untuk sementara namun portofolio saya tetap asli.
-  </h4>
-  
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Navigasi utama">
+      <a class="site-nav-brand" href="#profile" aria-label="Dhika Ramadhan Saputra, beranda">Dhika<span>.</span></a>
+      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">
+        <span class="site-nav-toggle-label">Menu</span>
+        <span class="site-nav-toggle-icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+      <ul class="site-nav-links" id="site-nav-links">
+        <li><a href="#profile" aria-current="location">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#work-experience">Karier</a></li>
+        <li><a href="#experience">Keahlian</a></li>
+        <li><a href="#projects">Proyek</a></li>
+        <li><a href="#certifications">Sertifikasi</a></li>
+        <li><a href="#publications">Publikasi</a></li>
+        <li><a href="#photo-gallery">Galeri</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <section id="profile">
     <div class="section__pic-container">
-      <img src="./assets/index/foto KP crop.jpg" alt="Foto foto_transparan_bulat" />
+      <img src="./assets/index/tentang 2.jpg" alt="Foto profil Dhika Ramadhan Saputra" />
     </div>
     <div class="section__text">
       <p class="section__text__p1">Hallo, saya</p>
@@ -45,7 +63,7 @@
     <h1 class="title">Tentang Saya</h1>
     <div class="section-container">
       <div class="section__pic-container">
-        <img src="./assets/index/tentang 2.jpg" alt="Profile picture" class="about-pic" />
+        <img src="./assets/index/foto-tentang-hitam-putih.jpg" alt="Potret hitam putih Dhika Ramadhan Saputra" class="about-pic" />
       </div>
       <div class="about-details-container">
         <div class="about-containers">
@@ -57,7 +75,7 @@
           <div class="details-container">
             <img src="./assets/index/education.png" alt="Education icon" class="icon" />
             <h3>Pendidikan</h3>
-            <p>Sedang menempuh<br />Teknik Informatika (S-1) UMP</p>
+            <p>Fresh Graduate<br />Teknik Informatika (S1) UMP</p>
           </div>
         </div>
         <div class="text-container">
@@ -76,6 +94,34 @@
     <h1 class="title">Pengalaman Kerja</h1>
     <div class="experience-details-container">
       <div class="about-containers work-container">
+
+        <div class="details-container work-card">
+          <div class="work-header">
+            <h2>Data Analyst | Internship</h2>
+            <span>September 2026 - Sekarang</span>
+          </div>
+          <h3 class="company-name">ATT Group | Tangerang, Banten</h3>
+          <!-- <ul class="work-list">
+            <li>Berkolaborasi dengan tim internal BPA UMP untuk mengevaluasi efektivitas strategi pemasaran universitas melalui analitik data.</li>
+            <li>Menjaga kepatuhan terhadap protokol keamanan dan privasi institusi selama perolehan serta integrasi data calon mahasiswa.</li>
+            <li>Menyajikan dashboard tren pendaftaran 10 tahun terakhir kepada pemangku kepentingan sebagai bahan strategi promosi dan penerimaan mahasiswa baru.</li>
+          </ul> -->
+          <div class="work-docs">
+            <span>Dokumentasi</span>
+            <div class="work-doc-grid">
+              <div class="work-doc-item">
+                <img src="./assets/index/att-group-kegiatan-tim.jpg" alt="Dhika bersama rekan magang di ruang kegiatan ATT Group" />
+              </div>
+              <div class="work-doc-item">
+                <img src="./assets/index/att-group-kegiatan-kantor.jpg" alt="Dhika berfoto di area kerja ATT Group" />
+              </div>
+              <div class="work-doc-item">
+                <img src="./assets/index/att-group-kegiatan-bersama.jpg" alt="Dhika bersama rekan magang saat kegiatan kelompok ATT Group" />
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="details-container work-card">
           <div class="work-header">
             <h2>Data Analyst | Project-based Internship</h2>
@@ -91,13 +137,7 @@
             <span>Dokumentasi</span>
             <div class="work-doc-grid">
               <div class="work-doc-item">
-                <img src="./assets/image/Gudang sembako.jpg" alt="Dokumentasi dashboard penjualan dan pengadaan barang" />
-              </div>
-              <div class="work-doc-item">
-                <img src="./assets/image/HR Analytics Dashboard.png" alt="Dokumentasi HR analytics dashboard" />
-              </div>
-              <div class="work-doc-item">
-                <img src="./assets/index/analisis pasar.png" alt="Dokumentasi analisis pasar industri ritel" />
+                <img src="./assets/index/foto KP ori.jpg" alt="Dokumentasi pengalaman kerja di Biro Publikasi dan Admisi UMP" />
               </div>
             </div>
           </div>
@@ -119,7 +159,7 @@
             <span>Dokumentasi</span>
             <div class="work-doc-grid">
               <div class="work-doc-item">
-                <img src="./assets/image/foto portofolio 2.png" alt="Dokumentasi sementara pengalaman KostAja" />
+                <img src="./assets/index/dokumentasi-transaksi-makelar.jpg" alt="Dokumentasi transaksi kost dan kontrakan di KostAja" />
               </div>
             </div>
           </div>
@@ -151,7 +191,7 @@
             <span>Dokumentasi</span>
             <div class="work-doc-grid">
               <div class="work-doc-item">
-                <img src="./assets/image/Coming soon.jpg" alt="Dokumentasi sementara pengalaman Helper di Steaky Steak" />
+                <img src="./assets/index/galeri-kegiatan-steakhouse.jpg" alt="Dhika bersama rekan kerja di Steak n Steak Purwokerto" />
               </div>
             </div>
           </div>
@@ -429,32 +469,23 @@
     <p class="section__text__p1">Di Balik Layar</p>
     <h1 class="title">Galeri Foto</h1>
     <div class="photo-gallery-grid">
-      <button class="photo-gallery-item" type="button" aria-label="Perbesar foto kegiatan kampus">
-        <img src="./assets/index/foto KP ori.jpg" alt="Foto kegiatan kampus di Universitas Muhammadiyah Purwokerto" />
+      <button class="photo-gallery-item" type="button" aria-label="Perbesar foto kerja praktik">
+        <img src="./assets/index/galeri-kerja-praktek.jpg" alt="Dhika mengenakan jas almamater di Fakultas Teknik dan Sains Universitas Muhammadiyah Purwokerto" />
       </button>
-      <button class="photo-gallery-item" type="button" aria-label="Perbesar foto formal">
-        <img src="./assets/index/foto tentang.jpg" alt="Foto formal Dhika Ramadhan Saputra" />
+      <button class="photo-gallery-item" type="button" aria-label="Perbesar dokumentasi magang di ATT Group">
+        <img src="./assets/index/galeri-magang-att-group.jpg" alt="Dokumentasi kegiatan magang dan kartu peserta magang Dhika di ATT Group" />
       </button>
-      <button class="photo-gallery-item" type="button" aria-label="Perbesar foto kegiatan kerja">
-        <img src="./assets/image/WIN_20240714_12_58_49_Pro-removebg-preview.png" alt="Foto kegiatan kerja" />
+      <button class="photo-gallery-item" type="button" aria-label="Perbesar foto kegiatan bersama tim">
+        <img src="./assets/index/galeri-kegiatan-steakhouse.jpg" alt="Foto bersama rekan kerja di Steak n Steak Purwokerto" />
       </button>
-      <button class="photo-gallery-item" type="button" aria-label="Perbesar foto profil">
-        <img src="./assets/index/foto_transparan_bulat.png" alt="Foto profil Dhika Ramadhan Saputra" />
+      <button class="photo-gallery-item" type="button" aria-label="Perbesar foto perjalanan bersama teman">
+        <img src="./assets/index/galeri-perjalanan-kereta.jpg" alt="Foto bersama teman di peron stasiun kereta" />
       </button>
-      <button class="photo-gallery-item" type="button" aria-label="Perbesar foto portofolio">
-        <img src="./assets/image/foto portofolio.png" alt="Foto portofolio Dhika Ramadhan Saputra" />
+      <button class="photo-gallery-item" type="button" aria-label="Perbesar foto wisuda">
+        <img src="./assets/index/galeri-yudisium.jpg" alt="Dhika membawa dokumen pada acara yudisium Fakultas Teknik dan Sains" />
       </button>
-      <button class="photo-gallery-item" type="button" aria-label="Perbesar foto kegiatan">
-        <img src="./assets/image/foto portofolio 2.png" alt="Foto kegiatan Dhika Ramadhan Saputra" />
-      </button>
-      <button class="photo-gallery-item" type="button" aria-label="Perbesar dokumentasi dashboard penjualan">
-        <img src="./assets/image/Gudang sembako.jpg" alt="Dashboard analisis penjualan dan pengadaan barang" />
-      </button>
-      <button class="photo-gallery-item" type="button" aria-label="Perbesar dokumentasi HR analytics">
-        <img src="./assets/image/HR Analytics Dashboard.png" alt="Dashboard HR analytics" />
-      </button>
-      <button class="photo-gallery-item" type="button" aria-label="Perbesar dokumentasi analisis pasar">
-        <img src="./assets/index/analisis pasar.png" alt="Visualisasi analisis pasar industri ritel" />
+      <button class="photo-gallery-item" type="button" aria-label="Perbesar foto formal Dhika">
+        <img src="./assets/index/galeri-foto-formal.jpg" alt="Potret formal Dhika Ramadhan Saputra mengenakan setelan jas" />
       </button>
     </div>
   </section>
@@ -467,7 +498,7 @@
         <p class="contact-description">Saya terbuka untuk berbagi cerita, bertukar ide, dan membahas peluang kolaborasi. Silakan hubungi saya melalui kanal berikut.</p>
       </div>
       <div class="contact-methods">
-        <a class="contact-method" href="mailto:dhikaramadhansaputra@gmail.com">
+        <a class="contact-method" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=dhikaramadhansaputra%40gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Kirim email ke dhikaramadhansaputra@gmail.com">
           <span class="contact-method-icon">
             <img src="./assets/icon/gmail-color.svg" alt="" />
           </span>
@@ -513,6 +544,74 @@
 
   <script src="Javascript/(new) js.js"></script>
   <script>
+    const siteNav = document.querySelector('.site-nav');
+    const siteNavToggle = document.querySelector('.site-nav-toggle');
+    const siteNavLinks = document.querySelector('.site-nav-links');
+    const sectionNavLinks = [...siteNavLinks.querySelectorAll('a')];
+    const pageSections = sectionNavLinks
+      .map((link) => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+    const setActiveSection = (sectionId) => {
+      sectionNavLinks.forEach((link) => {
+        if (link.hash === `#${sectionId}`) {
+          link.setAttribute('aria-current', 'location');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+    };
+
+    const closeSiteNav = () => {
+      siteNav.classList.remove('menu-open');
+      siteNavToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    siteNavToggle.addEventListener('click', () => {
+      const isExpanded = siteNavToggle.getAttribute('aria-expanded') === 'true';
+      siteNav.classList.toggle('menu-open', !isExpanded);
+      siteNavToggle.setAttribute('aria-expanded', String(!isExpanded));
+    });
+
+    sectionNavLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        closeSiteNav();
+        setActiveSection(link.hash.slice(1));
+      });
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        closeSiteNav();
+      }
+    });
+
+    const intersectingSections = new Set();
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          intersectingSections.add(entry.target);
+        } else {
+          intersectingSections.delete(entry.target);
+        }
+      });
+
+      if (intersectingSections.size === 0) {
+        return;
+      }
+
+      const viewportMarker = window.innerHeight * 0.325;
+      const activeSection = [...intersectingSections].sort((first, second) => (
+        Math.abs(first.getBoundingClientRect().top - viewportMarker)
+        - Math.abs(second.getBoundingClientRect().top - viewportMarker)
+      ))[0];
+      setActiveSection(activeSection.id);
+    }, {
+      rootMargin: '-20% 0px -55% 0px',
+      threshold: [0, 0.25, 0.5, 0.75, 1],
+    });
+
+    pageSections.forEach((section) => sectionObserver.observe(section));
+
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = document.getElementById('lightbox-image');
     const closeButton = document.querySelector('.lightbox-close');
